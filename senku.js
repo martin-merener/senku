@@ -1,3 +1,7 @@
+
+let game = new Senku();
+
+
 const cellSize = 50;
 const backgroundColor = [255, 255, 255];
 const pegColor = [50, 50, 50];
@@ -98,7 +102,6 @@ class Senku {
 
 
 function startSenku() {
-  game = new Senku();
   canvas = createCanvas(game.board[0].length * cellSize, game.board.length * cellSize);
   canvas.parent('game-container');
 }
@@ -143,7 +146,6 @@ function mouseClicked() {
 
 
 function startGame() {
-  game = new Senku();
   canvas = createCanvas(cellSize * 7, cellSize * 7);
   canvas.parent("game-container");
 }
