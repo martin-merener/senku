@@ -76,11 +76,18 @@ let game = new Senku();
 let movingPeg = null;
 let canvas;
 
+function setup() {
+  game = new Senku();
+  canvas = createCanvas(game.board[0].length * cellSize, game.board.length * cellSize);
+  canvas.parent('game-container');
+  canvas.hide(); // Add this line to hide the canvas initially
+}
+
 function initializeGame() {
   game = new Senku();
   canvas = createCanvas(game.board[0].length * cellSize, game.board.length * cellSize);
   canvas.parent('game-container');
-  canvas.hide();
+  canvas.show();
   loop();
 }
 
