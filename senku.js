@@ -1,5 +1,4 @@
 
-let game = new Senku();
 
 
 const cellSize = 50;
@@ -9,7 +8,7 @@ const emptyColor = [200, 200, 200];
 const borderColor = [100, 100, 100];
 const fontColor = [0, 0, 0];
 
-let game;
+let game = new Senku();
 let movingPeg = null;
 let canvas;
 
