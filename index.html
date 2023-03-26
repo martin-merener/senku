@@ -37,12 +37,13 @@
     <div id="game-container"></div>
 	<div class="button-container">
 		<button id="play-btn">PLAY SENKU</button>
-		<p>Click a black square and drag it to an empty square, jumping over another black square. The goal is to leave only one black square on the board.</p>
+		<p id="instructions">Drag a black square to an empty square, jumping over another black square. The goal is to leave only one square on the board.</p>
 	</div>
 	<button id="reset-btn" style="position: fixed; bottom: 20px; right: 20px;">Reset game</button>
 	<script>
 		document.getElementById("play-btn").addEventListener("click", function() {
 			this.style.display = "none";
+            document.getElementById("instructions").style.display = "none";
 			document.getElementById("game-container").style.display = "block";
 			initializeGame();
 		});

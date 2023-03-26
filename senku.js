@@ -109,7 +109,7 @@ function draw() {
     textAlign(CENTER, CENTER);
     textSize(36);
     fill(fontColor);
-    text(`INSERT COIN!`, width / 2, height / 2);
+    text(`Game Over`, width / 2, height / 2);
     noLoop();
   }
 }
