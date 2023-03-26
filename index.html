@@ -23,14 +23,23 @@
 </head>
 <body>
     <div id="game-container"></div>
-    <button id="play-btn">SENKU!</button>
+    <button id="play-btn">PLAY SENKU</button>
+	<button id="reset-btn" style="position: fixed; bottom: 20px; right: 20px;">Reset</button>
 	<script>
 		document.getElementById("play-btn").addEventListener("click", function() {
 			this.style.display = "none";
 			document.getElementById("game-container").style.display = "block";
 			initializeGame();
 		});
+		
+		document.getElementById("reset-btn").addEventListener("click", function() {
+			initializeGame();
+		});		
+		
 	</script>
+
+	
+
 </body>
 </html>
 
