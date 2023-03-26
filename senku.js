@@ -197,6 +197,20 @@ function mouseDragged() {
 }
 
 
+function touchStarted() {
+  mousePressed();
+}
+
+function touchMoved() {
+  mouseDragged();
+  return false; // Prevents default scrolling behavior on mobile devices
+}
+
+function touchEnded() {
+  mouseReleased();
+}
+
+
 function mouseClicked() {
   if (!game) return;
 
