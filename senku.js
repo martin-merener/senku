@@ -108,7 +108,7 @@ function draw() {
   if (!game.has_moves()) {
     textAlign(CENTER, CENTER);
     textSize(36);
-    fill(fontColor);
+	fill(255, 165, 0); // Orange color	 // fill(fontColor);
     text(`Game Over`, width / 2, height / 2);
     noLoop();
   }
