@@ -24,13 +24,13 @@
 <body>
     <div id="game-container"></div>
     <button id="play-btn">Play Senku!</button>
-    <script>
-        document.getElementById("play-btn").addEventListener("click", function() {
-            this.style.display = "none";
-            document.getElementById("game-container").style.display = "block";
-            startGame();
-        });
-    </script>
+	<script>
+		document.getElementById("play-btn").addEventListener("click", function() {
+			this.style.display = "none";
+			document.getElementById("game-container").style.display = "block";
+			initializeGame();
+		});
+	</script>
 </body>
 </html>
 
