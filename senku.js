@@ -104,7 +104,7 @@ let canvas;
 function initializeGame() {
   game = new Senku();
   canvas = createCanvas(game.board[0].length * cellSize, game.board.length * cellSize);
-  canvas.parent('senku-game');
+  canvas.parent('game-container');
 }
 
 function draw() {
