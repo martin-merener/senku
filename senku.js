@@ -71,28 +71,28 @@ class Senku {
 }
 
 
-  calculate_score() {
-    const pegsLeft = this.board.reduce((count, row) => count + row.filter(cell => cell === 1).length, 0);
+calculate_score() {
+const pegsLeft = this.board.reduce((count, row) => count + row.filter(cell => cell === 1).length, 0);
 
-    let score = 0;
-    if (pegsLeft === 1 && this.board[3][3] === 1) {
-      score = 100;
-    } else if (pegsLeft === 1) {
-      score = 75;
-    } else if (pegsLeft === 2) {
-      score = 50;
-    } else if (pegsLeft === 3) {
-      score = 25;
-    } else if (pegsLeft === 4) {
-      score = 10;
-    } else if (pegsLeft === 5) {
-      score = 5;
-    } else if (pegsLeft === 6) {
-      score = 1;
-    }
-    return score;
-  }
+let score = 0;
+if (pegsLeft === 1 && this.board[3][3] === 1) {
+  score = 100;
+} else if (pegsLeft === 1) {
+  score = 75;
+} else if (pegsLeft === 2) {
+  score = 50;
+} else if (pegsLeft === 3) {
+  score = 25;
+} else if (pegsLeft === 4) {
+  score = 10;
+} else if (pegsLeft === 5) {
+  score = 5;
+} else if (pegsLeft === 6) {
+  score = 1;
 }
+return score;
+}
+
 
 function setup() {
   game = new Senku();
