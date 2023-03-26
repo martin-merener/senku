@@ -2,35 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senku</title>
+    <title>Senku Game</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <script src="senku.js"></script>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        #game-container {
-            display: none;
-        }
-    </style>
 </head>
 <body>
-    <div id="game-container"></div>
-    <button id="play-btn">Play Senku!</button>
-    <script>
-        document.getElementById("play-btn").addEventListener("click", function() {
-            this.style.display = "none";
-            document.getElementById("game-container").style.display = "block";
-            startGame();
-        });
-    </script>
+    <button onclick="setup()">Play Senku!</button>
 </body>
 </html>
-
