@@ -104,7 +104,9 @@ class Senku {
 function startSenku() {
   canvas = createCanvas(game.board[0].length * cellSize, game.board.length * cellSize);
   canvas.parent('game-container');
+  drawBoard();
 }
+
 
 function draw() {
   background(backgroundColor);
@@ -148,4 +150,6 @@ function mouseClicked() {
 function startGame() {
   canvas = createCanvas(cellSize * 7, cellSize * 7);
   canvas.parent("game-container");
+  drawBoard();
 }
+
