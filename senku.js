@@ -164,7 +164,7 @@ function mouseReleased() {
         const middleX = (selectedPeg.x + x) / 2;
         const middleY = (selectedPeg.y + y) / 2;
         if (game.board[middleY][middleX] === 1) {
-          game.move(selectedPeg.x, selectedPeg.y, x, y);
+          game.make_move(selectedPeg.x, selectedPeg.y, x, y);
         }
       }
     }
@@ -188,7 +188,7 @@ function mouseDragged() {
         const middleX = (selectedPeg.x + x) / 2;
         const middleY = (selectedPeg.y + y) / 2;
         if (game.board[middleY][middleX] === 1) {
-          game.move(selectedPeg.x, selectedPeg.y, x, y);
+          game.make_move(selectedPeg.x, selectedPeg.y, x, y);
           selectedPeg = { x, y };
         }
       }
@@ -226,7 +226,7 @@ function mouseClicked() {
         const middleX = (selectedPeg.x + x) / 2;
         const middleY = (selectedPeg.y + y) / 2;
         if (game.board[middleY][middleX] === 1) {
-          game.move(selectedPeg.x, selectedPeg.y, x, y);
+          game.make_move(selectedPeg.x, selectedPeg.y, x, y);
           selectedPeg = null;
         }
       }
