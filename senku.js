@@ -132,6 +132,71 @@ function draw() {
 }
 
 
+let isDragging = false;
+
+function mousePressed() {
+  if (!game) return;
+
+  const x = Math.floor(mouseX / cellSize);
+  const y = Math.floor(mouseY / cellSize);
+
+  if (x >= 0 && x < game.board[0].length && y >= 0 && y < game.board.length) {
+    const cell = game.board[y][x];
+    if (cell === 1) {
+      selectedPeg = { x, y };
+      isDragging = true;
+    }
+  }
+}
+
+function mouseReleased() {
+  if (!game || !isDragging) return;
+
+  const x = Math.floor(mouseX / cellSize);
+  const y = Math.floor(mouseY / cellSize);
+
+  if (x >= 0 && x < game.board[0].length && y >= 0 && y < game.board.length) {
+    const cell = game.board[y][x];
+    if (cell === 0) {
+      const dx = Math.abs(selectedPeg.x - x);
+      const dy = Math.abs(selectedPeg.y - y);
+      if ((dx === 2 && dy === 0) || (dx === 0 && dy === 2)) {
+        const middleX = (selectedPeg.x + x) / 2;
+        const middleY = (selectedPeg.y + y) / 2;
+        if (game.board[middleY][middleX] === 1) {
+          game.move(selectedPeg.x, selectedPeg.y, x, y);
+        }
+      }
+    }
+  }
+
+  isDragging = false;
+  selectedPeg = null;
+}
+
+function mouseDragged() {
+  if (!game || !isDragging) return;
+  const x = Math.floor(mouseX / cellSize);
+  const y = Math.floor(mouseY / cellSize);
+
+  if (x >= 0 && x < game.board[0].length && y >= 0 && y < game.board.length) {
+    const cell = game.board[y][x];
+    if (cell === 0) {
+      const dx = Math.abs(selectedPeg.x - x);
+      const dy = Math.abs(selectedPeg.y - y);
+      if ((dx === 2 && dy === 0) || (dx === 0 && dy === 2)) {
+        const middleX = (selectedPeg.x + x) / 2;
+        const middleY = (selectedPeg.y + y) / 2;
+        if (game.board[middleY][middleX] === 1) {
+          game.move(selectedPeg.x, selectedPeg.y, x, y);
+          selectedPeg = { x, y };
+        }
+      }
+    }
+  }
+}
+
+
 function mouseClicked() {
   if (!game) return;
 
