@@ -8,9 +8,6 @@ const emptyColor = [200, 200, 200];
 const borderColor = [100, 100, 100];
 const fontColor = [0, 0, 0];
 
-let game = new Senku();
-let movingPeg = null;
-let canvas;
 
 class Senku {
   constructor() {
@@ -99,6 +96,10 @@ class Senku {
   }
 }
 
+
+let game = new Senku();
+let movingPeg = null;
+let canvas;
 
 function initializeGame() {
   game = new Senku();
