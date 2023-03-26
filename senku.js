@@ -97,9 +97,6 @@ class Senku {
 }
 
 
-
-
-
 function startSenku() {
   game = new Senku();
   canvas = createCanvas(game.board[0].length * cellSize, game.board.length * cellSize);
@@ -149,3 +146,4 @@ function startGame() {
   game = new Senku();
   canvas = createCanvas(cellSize * 7, cellSize * 7);
   canvas.parent("game-container");
+}
