@@ -124,7 +124,7 @@ function draw() {
   if (!game.has_moves()) {
     const score = game.calculate_score();
     textAlign(CENTER, CENTER);
-    textSize(36);
+    textSize(18);
     fill(fontColor);
     text(`Game finished! Score: ${score}`, width / 2, height / 2);
     noLoop();
