@@ -80,6 +80,7 @@ function initializeGame() {
   game = new Senku();
   canvas = createCanvas(game.board[0].length * cellSize, game.board.length * cellSize);
   canvas.parent('game-container');
+  canvas.hide();
   loop();
 }
 
