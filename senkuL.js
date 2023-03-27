@@ -1,7 +1,7 @@
 
 
 
-const cellSize = 50;
+const cellSize = 25;
 const backgroundColor = [255, 255, 255];
 const pegColor = [50, 50, 50];
 const emptyColor = [200, 200, 200];
